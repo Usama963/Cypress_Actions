@@ -13,6 +13,7 @@ describe("demo QA website test", function () {
     cy.visit("https://automationintesting.online");
     cy.get('button[type="button"]')
       .contains("Let me hack!")
+      .should("be.visible")
       .click({ force: true });
   });
   it("test 2", () => {
