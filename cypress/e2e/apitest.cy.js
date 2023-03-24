@@ -15,9 +15,9 @@ describe("api testing with cypress", () => {
     cy.api({
       method: "POST",
       body: {
-        name: "John dave",
+        name: "Nawaz Sharif",
         gender: "male",
-        email: "john.dave1@yahoo.com",
+        email: "Nawaz Sharif1@yahoo.com",
         status: "active",
       },
       url: "https://gorest.co.in/public/v2/users",
@@ -27,7 +27,7 @@ describe("api testing with cypress", () => {
       },
     }).then((data) => {
       expect(data.status).to.eq(201);
-      expect(data.body.name).to.eq("John dave");
+      expect(data.body.name).to.eq("Nawaz Sharif");
     });
   });
 
